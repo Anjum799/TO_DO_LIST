@@ -1,0 +1,38 @@
+/* Set a minimum height for the header */
+header {
+    min-height: 80px;
+}
+
+/* Logo Styling */
+#img1 {
+    width: 150px;
+    /* height: auto; */
+    margin-top: -20px;
+}
+
+/* Navigation Styling */
+#to_do a {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect for navigation links */
+#to_do a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+/* For smaller screen sizes, ensure the navigation adjusts */
+@media (max-width: 768px) {
+    #to_do {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #to_do a {
+        margin: 5px 0;
+    }
+}

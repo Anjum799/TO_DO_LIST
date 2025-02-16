@@ -1,0 +1,20 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'contact.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div id="contact_div" class="card p-4 shadow-sm">
+        <h5 class="card-title">Task Details</h5>
+        <p><strong>Task:</strong> {{ d1.task }}</p>
+        <p><strong>Description:</strong> {{ d1.desc }}</p>
+        <a href="{% url 'edit_name' d1.id %}" class="btn btn-primary btn-sm mb-3">Edit</a>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success btn-sm">Delete </button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

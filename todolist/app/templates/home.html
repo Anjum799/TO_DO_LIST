@@ -1,0 +1,27 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<section class="container mt-5">
+  <div id="h" class="mt-4">
+    <form action="" method="POST" id="for" class="form-inline justify-content-center mb-3">
+      {% csrf_token %}
+      <input type="text" name="search" class="form-control mr-2" placeholder="Search..." id="">
+      <button class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="text-center">
+      {% for i in data %}
+        <a href="{% url 'contact_name' i.id %}" class="d-block mb-2"><h1 id="ha" class="h4">{{ i.task }}</h1></a>
+      {% endfor %}
+      <a href="{% url 'list_name' %}" id="content" class="btn btn-success mt-3">Add Content</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock content %}

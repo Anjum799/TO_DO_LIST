@@ -1,0 +1,35 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<!-- Link to Bootstrap CSS (if not already included in your base template) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'to_do_list.css' %}">
+
+<section id="section_to_do" class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="" method="POST" id="form_to_do" class="bg-light p-4 rounded shadow-sm">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="task" class="form-label">TASK:</label>
+                    <input type="text" name="task" id="task" class="form-control" placeholder="Enter your task">
+                </div>
+
+                <div class="mb-3">
+                    <label for="des" class="form-label">DESCRIPTION:</label>
+                    <input type="text" name="desc" id="des" class="form-control" placeholder="Describe your task">
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a href="" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Link to Bootstrap JS (for interactivity like dropdowns, modals, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+/* Additional styles can be added here as needed */
+#search-input {
+    width: 300px;
+  }
+  
+  #content-title {
+    color: #333;
+  }
+  
+  #add-content-link button {
+    width: 150px;
+  }

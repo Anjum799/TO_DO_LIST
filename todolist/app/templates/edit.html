@@ -1,0 +1,29 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<!-- Include Bootstrap CSS (if not already included in nav.html) -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<form action="" method="POST" class="container mt-4">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="task">Task:</label>
+        <input type="text" name="task" value="{{d2.task}}" class="form-control" id="task">
+    </div>
+    
+    <div class="form-group">
+        <label for="des">Description:</label>
+        <input type="text" name="desc" value="{{d2.desc}}" class="form-control" id="desc">
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{% url 'home_name' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+<!-- Include Bootstrap JS (optional for interactive features) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock content %}

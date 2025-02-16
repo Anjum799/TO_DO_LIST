@@ -1,0 +1,25 @@
+/* Optional Custom Styles */
+#section_to_do {
+    background-color: #f8f9fa;
+}
+
+#form_to_do {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#form_to_do input {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#form_to_do button {
+    width: 45%;
+}
+
+#form_to_do a {
+    width: 45%;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}

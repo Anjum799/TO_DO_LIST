@@ -1,0 +1,31 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="{% static 'css/history.css' %}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Search Box -->
+<div class="search-box-container">
+    <form method="POST" action="{% url 'history_name' %}">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="Search task" class="search-box">
+    </form>
+</div>
+
+<!-- Task List -->
+<div class="task-list">
+    {% for task in data %}
+    <div class="task-item">
+        <span class="task-name">{{ task.task }}</span>
+        <!-- Delete Button -->
+        <form action="{% url 'history_delete' pk=task.id %}" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn-delete">
+                <i class="fas fa-trash-alt"></i> <!-- Trash bin icon -->
+            </button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
