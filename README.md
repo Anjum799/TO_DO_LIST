@@ -71,7 +71,8 @@
 ## 📬 Contributing
 ### Feel free to fork the repository and submit a pull request if you’d like to contribute!
 
-THANK YOU 👍  welcome to the to_do_list
+THANK YOU 👍
+
 
 
 
