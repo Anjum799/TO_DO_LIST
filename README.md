@@ -69,7 +69,7 @@
     python manage.py runserver
     
 ## 📬 Contributing
-### Feel free to fork the repository and submit a pull request if you’d like to 
+### Feel free to fork the repository and submit a pull request if you’d like to c
 
 THANK YOU 👍 
 
