@@ -1,4 +1,4 @@
-seem# TO_DO_LIST
+sem# TO_DO_LIST
 ### This is project of to-do-list which user will add the list of works he/she want to do
 
 ## 🚀 Features
